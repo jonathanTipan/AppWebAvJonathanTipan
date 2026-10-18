@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" role="img" aria-label="Juan Gabriel">
+  <defs>
+    <linearGradient id="ab1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#052e3a"/><stop offset="55%" stop-color="#0e7490"/><stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+    <radialGradient id="ag1" cx="50%" cy="38%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity=".38"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#ab1)"/>
+  <rect width="500" height="500" fill="url(#ag1)"/>
+  <circle cx="250" cy="196" r="86" fill="#ffffff" fill-opacity=".18"/>
+  <path d="M96 500c0-96 69-160 154-160s154 64 154 160z" fill="#ffffff" fill-opacity=".18"/>
+  <text x="250" y="222" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="104" font-weight="700" fill="#ffffff" fill-opacity=".92">JG</text>
+</svg>

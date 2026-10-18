@@ -1,0 +1,75 @@
+===============================================================================
+ PoliMusic - Guia de despliegue en IIS
+===============================================================================
+
+La aplicacion ya esta terminada y probada. Solo falta copiarla a
+C:\inetpub\wwwroot, y para eso Windows exige permisos de administrador.
+
+------------------------------------------------------------------------------
+ PASO 1 - Desplegar (lo unico que debes hacer tu)
+------------------------------------------------------------------------------
+ 1. Abre la carpeta  Deploy\
+ 2. Haz clic derecho sobre  desplegar_como_administrador.bat
+ 3. Elige  "Ejecutar como administrador"  y acepta el aviso de UAC
+
+ El instalador hace todo lo demas automaticamente:
+   - Comprueba que IIS y ASP clasico esten activos
+   - Copia la aplicacion a  C:\inetpub\wwwroot\PoliMusic
+   - NO borra la carpeta uploads (conserva los archivos ya subidos)
+   - Concede lectura a IIS_IUSRS y escritura sobre uploads
+   - Sube el limite de subida a 100 MB (necesario para los MP3)
+   - Activa los errores detallados para facilitar la puesta a punto
+
+------------------------------------------------------------------------------
+ PASO 2 - Abrir la aplicacion
+------------------------------------------------------------------------------
+   http://localhost/PoliMusic/
+
+ Cuentas disponibles (contrasena 12345678 en todas):
+
+   userAdmin   -> Administrador: CRUD de usuarios, canciones, artistas,
+                  albumes y playlists.
+   userNormal  -> Usuario normal: reproduce canciones, consulta albumes y
+                  artistas, y gestiona SUS PROPIAS playlists.
+   epn.fis     -> Usuario normal (mismo perfil que userNormal).
+
+------------------------------------------------------------------------------
+ REQUISITOS PREVIOS (ya verificados en este equipo)
+------------------------------------------------------------------------------
+   [x] IIS instalado            C:\Windows\System32\inetsrv
+   [x] ASP clasico activo       C:\Windows\System32\inetsrv\asp.dll
+   [x] SQL Server en localhost  base de datos BDD_PoliMusic
+   [x] Usuario SQL              usr_polimusic / Politecnica1
+
+ Si ASP clasico no estuviera activo, actívalo en:
+   Panel de control > Programas > Caracteristicas de Windows >
+   Internet Information Services > World Wide Web Services >
+   Application Development Features > ASP
+
+------------------------------------------------------------------------------
+ SI ALGO NO FUNCIONA
+------------------------------------------------------------------------------
+ - Pagina en blanco o error 500:
+       Comprueba que ASP clasico este habilitado (ver arriba).
+
+ - "No se puede conectar a la base de datos":
+       Revisa que el servicio SQL Server este iniciado y que la cadena de
+       conexion en  PoliMusic\inc\config.asp  sea la correcta.
+
+ - No se pueden subir canciones grandes:
+       El instalador ya sube el limite a 100 MB. Si necesitas mas, edita
+       la variable $MaxMB al principio de  Deploy\instalar_iis.ps1.
+
+ - Las imagenes o el CSS no cargan:
+       Verifica que la aplicacion este en  C:\inetpub\wwwroot\PoliMusic
+       (la app detecta sola si esta en la raiz o en una subcarpeta).
+
+------------------------------------------------------------------------------
+ DESPLIEGUE MANUAL (alternativa, si prefieres hacerlo a mano)
+------------------------------------------------------------------------------
+ Abre PowerShell como administrador y ejecuta:
+
+   cd D:\AppWebAvJonathanTipan\webapppolimusicv1_asp\Deploy
+   powershell -ExecutionPolicy Bypass -File .\instalar_iis.ps1
+
+===============================================================================

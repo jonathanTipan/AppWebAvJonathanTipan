@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" role="img" aria-label="Classic Album">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#141b34"/><stop offset="60%" stop-color="#2563eb"/><stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <radialGradient id="glow4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity=".55"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sheen4" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#000000" stop-opacity=".55"/><stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#bg4)"/>
+  <circle cx="250" cy="215" r="150" fill="url(#glow4)" opacity=".35"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity=".16" stroke-width="2">
+    <circle cx="250" cy="215" r="46"/><circle cx="250" cy="215" r="70"/>
+    <circle cx="250" cy="215" r="94"/><circle cx="250" cy="215" r="118"/>
+    <circle cx="250" cy="215" r="142"/>
+  </g>
+  <circle cx="250" cy="215" r="30" fill="#05080f" opacity=".85"/>
+  <circle cx="250" cy="215" r="11" fill="#a78bfa"/>
+  <rect width="500" height="500" fill="url(#sheen4)"/>
+  <text x="42" y="392" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700" fill="#ffffff">Classic Album</text>
+  <text x="42" y="432" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="500" fill="#ffffff" fill-opacity=".72">1950</text>
+</svg>

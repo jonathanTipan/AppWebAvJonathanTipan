@@ -1,0 +1,87 @@
+<%
+' =============================================================================
+'  PoliMusic - Iconos SVG en linea (sin dependencias externas)
+' =============================================================================
+Function Icon(name)
+    Icon = "<svg class=""ic"" viewBox=""0 0 24 24"" aria-hidden=""true"" focusable=""false"">" & _
+           IconBody(LCase(N(name))) & "</svg>"
+End Function
+
+Private Function IconBody(n)
+    Dim s
+    s = "fill=""none"" stroke=""currentColor"" stroke-width=""1.9"" stroke-linecap=""round"" stroke-linejoin=""round"""
+
+    Select Case n
+        Case "home"
+            IconBody = "<path " & s & " d=""M3 10.7 12 3.3l9 7.4V20a1.6 1.6 0 0 1-1.6 1.6h-4.1v-6.2H8.7v6.2H4.6A1.6 1.6 0 0 1 3 20z""/>"
+        Case "search"
+            IconBody = "<circle " & s & " cx=""11"" cy=""11"" r=""7""/><path " & s & " d=""m16.3 16.3 4.4 4.4""/>"
+        Case "music"
+            IconBody = "<path " & s & " d=""M9 18V5.4l11-2v12.2""/><circle " & s & " cx=""6.2"" cy=""18"" r=""2.9""/><circle " & s & " cx=""17.2"" cy=""15.6"" r=""2.9""/>"
+        Case "disc"
+            IconBody = "<circle " & s & " cx=""12"" cy=""12"" r=""9""/><circle " & s & " cx=""12"" cy=""12"" r=""2.6""/>"
+        Case "artist"
+            IconBody = "<circle " & s & " cx=""12"" cy=""8"" r=""4""/><path " & s & " d=""M4.5 20.5c0-4.1 3.4-6.6 7.5-6.6s7.5 2.5 7.5 6.6""/>"
+        Case "playlist"
+            IconBody = "<path " & s & " d=""M4 6h11M4 11h11M4 16h7""/><path " & s & " d=""M17 13v7""/><circle " & s & " cx=""19.4"" cy=""20"" r=""2.4""/>"
+        Case "users"
+            IconBody = "<circle " & s & " cx=""9"" cy=""8"" r=""3.6""/><path " & s & " d=""M2.8 20c0-3.6 2.8-5.8 6.2-5.8s6.2 2.2 6.2 5.8""/><path " & s & " d=""M16.5 5.2a3.4 3.4 0 0 1 0 6.6M18 14.6c2 .7 3.3 2.4 3.3 4.6""/>"
+        Case "plus"
+            IconBody = "<path " & s & " d=""M12 5v14M5 12h14""/>"
+        Case "logout"
+            IconBody = "<path " & s & " d=""M15 4.5h3.5A1.5 1.5 0 0 1 20 6v12a1.5 1.5 0 0 1-1.5 1.5H15""/><path " & s & " d=""M10 8l-4 4 4 4M6 12h9""/>"
+        Case "login"
+            IconBody = "<path " & s & " d=""M9 4.5H5.5A1.5 1.5 0 0 0 4 6v12a1.5 1.5 0 0 0 1.5 1.5H9""/><path " & s & " d=""M14 8l4 4-4 4M18 12H9""/>"
+        Case "user"
+            IconBody = "<circle " & s & " cx=""12"" cy=""8"" r=""3.8""/><path " & s & " d=""M4.8 20.4c0-3.9 3.2-6.2 7.2-6.2s7.2 2.3 7.2 6.2""/>"
+        Case "play"
+            IconBody = "<path fill=""currentColor"" d=""M8 5.2v13.6L19.2 12z""/>"
+        Case "pause"
+            IconBody = "<path fill=""currentColor"" d=""M7.5 5h3.2v14H7.5zM13.3 5h3.2v14h-3.2z""/>"
+        Case "next"
+            IconBody = "<path fill=""currentColor"" d=""M6 5.4v13.2L15.6 12z""/><rect fill=""currentColor"" x=""16.6"" y=""5.2"" width=""2.4"" height=""13.6"" rx=""1""/>"
+        Case "prev"
+            IconBody = "<path fill=""currentColor"" d=""M18 5.4v13.2L8.4 12z""/><rect fill=""currentColor"" x=""5"" y=""5.2"" width=""2.4"" height=""13.6"" rx=""1""/>"
+        Case "shuffle"
+            IconBody = "<path " & s & " d=""M17 4.5 20.5 8 17 11.5M17 12.5 20.5 16 17 19.5""/><path " & s & " d=""M3.5 8h3.2c1.6 0 2.6.9 3.6 2.2M3.5 16h3.2c4.6 0 5-8 9.6-8h4""/><path " & s & " d=""M3.5 16h3.2c1.6 0 2.6-.9 3.6-2.2M13.4 16.6c1 1.2 2 2.4 4 2.4h3""/>"
+        Case "repeat"
+            IconBody = "<path " & s & " d=""M6.5 5.5h11a3 3 0 0 1 3 3v2M17.5 18.5h-11a3 3 0 0 1-3-3v-2""/><path " & s & " d=""M9 2.8 6 5.5l3 2.7M15 15.8l3 2.7-3 2.7""/>"
+        Case "volume"
+            IconBody = "<path " & s & " d=""M4 9.5h3l4-3.5v12l-4-3.5H4z""/><path " & s & " d=""M14.5 9.4a3.6 3.6 0 0 1 0 5.2M17.2 6.7a7.4 7.4 0 0 1 0 10.6""/>"
+        Case "mute"
+            IconBody = "<path " & s & " d=""M4 9.5h3l4-3.5v12l-4-3.5H4z""/><path " & s & " d=""m15 9.5 5 5M20 9.5l-5 5""/>"
+        Case "trash"
+            IconBody = "<path " & s & " d=""M4.5 6.5h15M9.5 6.5V4.8A1.3 1.3 0 0 1 10.8 3.5h2.4a1.3 1.3 0 0 1 1.3 1.3v1.7""/><path " & s & " d=""M6.5 6.5 7.4 20a1.4 1.4 0 0 0 1.4 1.3h6.4a1.4 1.4 0 0 0 1.4-1.3l.9-13.5""/><path " & s & " d=""M10.3 10.5v6.5M13.7 10.5v6.5""/>"
+        Case "edit"
+            IconBody = "<path " & s & " d=""M4 20h4.2L20 8.2a2 2 0 0 0 0-2.8l-1.4-1.4a2 2 0 0 0-2.8 0L4 15.8z""/><path " & s & " d=""m14.5 5.5 4 4""/>"
+        Case "close"
+            IconBody = "<path " & s & " d=""M6 6l12 12M18 6 6 18""/>"
+        Case "check"
+            IconBody = "<path " & s & " d=""m4.5 12.5 5 5 10-11""/>"
+        Case "alert"
+            IconBody = "<path " & s & " d=""M12 3.5 21.5 20H2.5z""/><path " & s & " d=""M12 9.5v5M12 17.3v.2""/>"
+        Case "clock"
+            IconBody = "<circle " & s & " cx=""12"" cy=""12"" r=""8.6""/><path " & s & " d=""M12 7.2V12l3.4 2""/>"
+        Case "heart"
+            IconBody = "<path " & s & " d=""M12 20.3 4.6 13a4.7 4.7 0 0 1 6.6-6.7l.8.8.8-.8A4.7 4.7 0 0 1 19.4 13z""/>"
+        Case "upload"
+            IconBody = "<path " & s & " d=""M12 16.5V4.5M7.5 9 12 4.5 16.5 9""/><path " & s & " d=""M4.5 15v3.5A1.5 1.5 0 0 0 6 20h12a1.5 1.5 0 0 0 1.5-1.5V15""/>"
+        Case "filter"
+            IconBody = "<path " & s & " d=""M3.5 5.5h17l-6.6 7.6v5.4l-3.8 2v-7.4z""/>"
+        Case "chevron-left"
+            IconBody = "<path " & s & " d=""m14.5 5.5-7 6.5 7 6.5""/>"
+        Case "chevron-right"
+            IconBody = "<path " & s & " d=""m9.5 5.5 7 6.5-7 6.5""/>"
+        Case "arrow-left"
+            IconBody = "<path " & s & " d=""M20 12H4M10 6l-6 6 6 6""/>"
+        Case "grid"
+            IconBody = "<rect " & s & " x=""3.5"" y=""3.5"" width=""7"" height=""7"" rx=""1.6""/><rect " & s & " x=""13.5"" y=""3.5"" width=""7"" height=""7"" rx=""1.6""/><rect " & s & " x=""3.5"" y=""13.5"" width=""7"" height=""7"" rx=""1.6""/><rect " & s & " x=""13.5"" y=""13.5"" width=""7"" height=""7"" rx=""1.6""/>"
+        Case "list"
+            IconBody = "<path " & s & " d=""M4 6.5h16M4 12h16M4 17.5h16""/>"
+        Case "settings"
+            IconBody = "<circle " & s & " cx=""12"" cy=""12"" r=""3.2""/><path " & s & " d=""M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-2.9 1.2 2 2 0 1 1-4 0 1.7 1.7 0 0 0-2.9-1.2l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A1.7 1.7 0 0 0 4.6 15a2 2 0 1 1 0-4 1.7 1.7 0 0 0 1.2-2.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1A1.7 1.7 0 0 0 11.5 4a2 2 0 1 1 4 0 1.7 1.7 0 0 0 2.9 1.2l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1A1.7 1.7 0 0 0 22.4 11a2 2 0 1 1 0 4z""/>"
+        Case Else
+            IconBody = "<circle " & s & " cx=""12"" cy=""12"" r=""8.5""/>"
+    End Select
+End Function
+%>

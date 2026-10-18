@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" role="img" aria-label="Edward Sheeran">
+  <defs>
+    <linearGradient id="ab5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101c3d"/><stop offset="55%" stop-color="#4338ca"/><stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <radialGradient id="ag5" cx="50%" cy="38%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity=".38"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#ab5)"/>
+  <rect width="500" height="500" fill="url(#ag5)"/>
+  <circle cx="250" cy="196" r="86" fill="#ffffff" fill-opacity=".18"/>
+  <path d="M96 500c0-96 69-160 154-160s154 64 154 160z" fill="#ffffff" fill-opacity=".18"/>
+  <text x="250" y="222" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="104" font-weight="700" fill="#ffffff" fill-opacity=".92">ES</text>
+</svg>
